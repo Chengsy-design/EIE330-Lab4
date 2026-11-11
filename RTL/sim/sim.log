@@ -1,0 +1,1412 @@
+
+========== 2026-11-09 19:04:50.626274 ==========
+Detected OS: Linux
+Found SDL2: sdl2-config
+SDL CFLAGS: -I/usr/include/SDL2 -D_REENTRANT
+SDL LIBS: -lSDL2
+Start simulation...
+Include directories used: /home/a/Desktop/lab4_DSH_DSF/code/Lab_4_1/RTL
+---------------------------------
+Step 0: Clean up previously generated files...
+Tip: The obj_dir folder does not exist, no need to clean it up
+---------------------------------
+Step 1: Run Verilator Compiler...
+- V e r i l a t i o n   R e p o r t: Verilator 5.032 2025-01-01 rev (Debian 5.032-1)
+- Verilator: Built from 0.047 MB sources in 8 modules, into 0.070 MB in 8 C++ files needing 0.000 MB
+- Verilator: Walltime 0.022 s (elab=0.002, cvt=0.009, bld=0.000); cpu 0.017 s on 1 threads; alloced 15.516 MB
+✓ Verilator compilation completed successfully!
+---------------------------------
+Step 2: Build the simulation executable...
+make: Entering directory '/home/a/Desktop/lab4_DSH_DSF/code/Lab_4_1/RTL/sim/obj_dir'
+g++ -I/usr/include/SDL2 -D_REENTRANT -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -I/usr/include/SDL2 -D_REENTRANT   -Os  -c -o simulator.o ../simulator.cpp
+g++ -Os -I/usr/include/SDL2 -D_REENTRANT -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -I/usr/include/SDL2 -D_REENTRANT   -c -o verilated.o /usr/share/verilator/include/verilated.cpp
+g++ -Os -I/usr/include/SDL2 -D_REENTRANT -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -I/usr/include/SDL2 -D_REENTRANT   -c -o verilated_threads.o /usr/share/verilator/include/verilated_threads.cpp
+python3 /usr/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include VDevelopmentBoard.cpp VDevelopmentBoard___024root__DepSet_h12278337__0.cpp VDevelopmentBoard___024root__DepSet_hd469b289__0.cpp VDevelopmentBoard__ConstPool_0.cpp VDevelopmentBoard___024root__Slow.cpp VDevelopmentBoard___024root__DepSet_h12278337__0__Slow.cpp VDevelopmentBoard___024root__DepSet_hd469b289__0__Slow.cpp VDevelopmentBoard__Syms.cpp > VDevelopmentBoard__ALL.cpp
+echo "" > VDevelopmentBoard__ALL.verilator_deplist.tmp
+g++ -Os -I/usr/include/SDL2 -D_REENTRANT -I.  -MMD -I/usr/share/verilator/include -I/usr/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TIMING=0 -DVM_TRACE=0 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=0 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-shadow -Wno-sign-compare -Wno-tautological-compare -Wno-uninitialized -Wno-unused-but-set-parameter -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable    -I/usr/include/SDL2 -D_REENTRANT   -c -o VDevelopmentBoard__ALL.o VDevelopmentBoard__ALL.cpp
+../simulator.cpp: In function ‘void render_sdl()’:
+../simulator.cpp:305:34: warning: narrowing conversion of ‘(49 + i)’ from ‘int’ to ‘char’ [-Wnarrowing]
+  305 |         char digit_str[2] = {'1' + i, '\0'};
+      |                              ~~~~^~~
+g++    simulator.o verilated.o verilated_threads.o VDevelopmentBoard__ALL.a   -lSDL2  -pthread -lpthread -latomic   -o VDevelopmentBoard
+rm VDevelopmentBoard__ALL.verilator_deplist.tmp
+make: Leaving directory '/home/a/Desktop/lab4_DSH_DSF/code/Lab_4_1/RTL/sim/obj_dir'
+✓ Simulation executable file built successfully!
+---------------------------------
+Step 3: Start the simulation...
+----------------------------------------
+Window surface size: 800x850
+[SimThread] Starting simulation loop...
+[EventLoop] Dropped 6 events this frame (processed 1/7)
+[EventLoop] Slow frame: 55ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 34ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] FPS: 50 | Events: 2 | Dropped: 6 | MaxEvents/Frame: 7 | MaxFrameTime: 55ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 39ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 36ms (target: 16ms)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] FPS: 51 | Events: 8 | Dropped: 11 | MaxEvents/Frame: 4 | MaxFrameTime: 39ms
+[EventLoop] Slow frame: 34ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 39ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 38ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] FPS: 52 | Events: 8 | Dropped: 8 | MaxEvents/Frame: 4 | MaxFrameTime: 39ms
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 29ms
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 56 | Events: 2 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 28ms
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] FPS: 57 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 29ms
+[EventLoop] Slow frame: 36ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] FPS: 56 | Events: 2 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 36ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B2' released
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] FPS: 53 | Events: 8 | Dropped: 6 | MaxEvents/Frame: 3 | MaxFrameTime: 29ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] FPS: 51 | Events: 7 | Dropped: 6 | MaxEvents/Frame: 3 | MaxFrameTime: 32ms
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] FPS: 56 | Events: 4 | Dropped: 5 | MaxEvents/Frame: 3 | MaxFrameTime: 29ms
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[Input] Button 'B2' released (drag out)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 34ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 35ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[VGA] VSync #60 (frame 1s)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] FPS: 56 | Events: 12 | Dropped: 19 | MaxEvents/Frame: 4 | MaxFrameTime: 35ms
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] FPS: 55 | Events: 5 | Dropped: 3 | MaxEvents/Frame: 2 | MaxFrameTime: 26ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[Input] Button 'RESET' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[SimThread] Reset triggered
+[Input] Button 'RESET' released
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 36ms (target: 16ms)
+[EventLoop] FPS: 55 | Events: 2 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 36ms
+[Input] Button 'RESET' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[SimThread] Reset triggered
+[Input] Button 'RESET' released
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[EventLoop] FPS: 57 | Events: 2 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 32ms
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 38ms (target: 16ms)
+[EventLoop] FPS: 51 | Events: 2 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 38ms
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 48ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'RESET' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[SimThread] Reset triggered
+[Input] Button 'RESET' released
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 53 | Events: 2 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 48ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 31ms
+[Input] Button 'RESET' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[SimThread] Reset triggered
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[Input] Button 'RESET' released
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] FPS: 51 | Events: 2 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 32ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 33ms
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] FPS: 56 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 27ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 5 | Dropped: 8 | MaxEvents/Frame: 3 | MaxFrameTime: 31ms
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 34ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 51 | Events: 2 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 34ms
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 36ms (target: 16ms)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] FPS: 51 | Events: 8 | Dropped: 7 | MaxEvents/Frame: 3 | MaxFrameTime: 36ms
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 35ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[VGA] VSync #120 (frame 2s)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 38ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 52 | Events: 7 | Dropped: 5 | MaxEvents/Frame: 3 | MaxFrameTime: 38ms
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] FPS: 55 | Events: 3 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 27ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] FPS: 57 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 26ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] FPS: 55 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 25ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] FPS: 55 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 28ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 27ms
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 35ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 35ms
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] FPS: 53 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 31ms
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] FPS: 52 | Events: 10 | Dropped: 13 | MaxEvents/Frame: 3 | MaxFrameTime: 33ms
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] FPS: 57 | Events: 6 | Dropped: 4 | MaxEvents/Frame: 3 | MaxFrameTime: 30ms
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] FPS: 53 | Events: 8 | Dropped: 4 | MaxEvents/Frame: 2 | MaxFrameTime: 29ms
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] FPS: 57 | Events: 4 | Dropped: 2 | MaxEvents/Frame: 2 | MaxFrameTime: 26ms
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' released
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] FPS: 52 | Events: 6 | Dropped: 6 | MaxEvents/Frame: 3 | MaxFrameTime: 33ms
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[VGA] VSync #180 (frame 3s)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 35ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] FPS: 53 | Events: 5 | Dropped: 4 | MaxEvents/Frame: 3 | MaxFrameTime: 35ms
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] FPS: 55 | Events: 6 | Dropped: 8 | MaxEvents/Frame: 4 | MaxFrameTime: 31ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 36ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 36ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 43ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 35ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 48 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 43ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 35ms (target: 16ms)
+[EventLoop] Slow frame: 39ms (target: 16ms)
+[EventLoop] Slow frame: 34ms (target: 16ms)
+[EventLoop] FPS: 55 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 39ms
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 40ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] FPS: 49 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 40ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] FPS: 56 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 28ms
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 35ms (target: 16ms)
+[EventLoop] Slow frame: 36ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 34ms (target: 16ms)
+[EventLoop] FPS: 49 | Events: 10 | Dropped: 5 | MaxEvents/Frame: 2 | MaxFrameTime: 36ms
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' released
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 35ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 38ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 7 | Dropped: 4 | MaxEvents/Frame: 2 | MaxFrameTime: 38ms
+[Input] Button 'B2' released
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Slow frame: 38ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1
+/2)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] FPS: 54 | Events: 13 | Dropped: 11 | MaxEvents/Frame: 4 | MaxFrameTime: 38ms
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] FPS: 57 | Events: 15 | Dropped: 25 | MaxEvents/Frame: 4 | MaxFrameTime: 25ms
+[Input] Button 'B3' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B3' released
+[Input] Button 'B3' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[Input] Button 'B3' released
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[VGA] VSync #240 (frame 4s)
+[EventLoop] FPS: 53 | Events: 9 | Dropped: 13 | MaxEvents/Frame: 4 | MaxFrameTime: 30ms
+[Input] Button 'B4' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B4' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[Input] Button 'B4' released
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B4' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B4' released
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] FPS: 55 | Events: 11 | Dropped: 13 | MaxEvents/Frame: 4 | MaxFrameTime: 31ms
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[Input] Button 'B5' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B5' released
+[Input] Button 'B5' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[Input] Button 'B5' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B5' released
+[Input] Button 'B5' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] FPS: 57 | Events: 9 | Dropped: 7 | MaxEvents/Frame: 3 | MaxFrameTime: 25ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[Input] Button 'B5' released
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] FPS: 53 | Events: 14 | Dropped: 18 | MaxEvents/Frame: 4 | MaxFrameTime: 30ms
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] FPS: 55 | Events: 9 | Dropped: 12 | MaxEvents/Frame: 4 | MaxFrameTime: 33ms
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[Input] Button 'B2' released (drag out)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] FPS: 57 | Events: 10 | Dropped: 15 | MaxEvents/Frame: 4 | MaxFrameTime: 26ms
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 36ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] FPS: 52 | Events: 3 | Dropped: 3 | MaxEvents/Frame: 3 | MaxFrameTime: 36ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 4 events this frame (processed 1/5)
+[EventLoop] FPS: 58 | Events: 10 | Dropped: 18 | MaxEvents/Frame: 5 | MaxFrameTime: 25ms
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 4 events this frame (processed 1/5)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Dropped 4 events this frame (processed 1/5)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] FPS: 55 | Events: 12 | Dropped: 18 | MaxEvents/Frame: 5 | MaxFrameTime: 32ms
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 43ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 49 | Events: 10 | Dropped: 10 | MaxEvents/Frame: 4 | MaxFrameTime: 43ms
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 40ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] FPS: 51 | Events: 4 | Dropped: 5 | MaxEvents/Frame: 3 | MaxFrameTime: 40ms
+[EventLoop] FPS: 60 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 21ms
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] FPS: 56 | Events: 1 | Dropped: 2 | MaxEvents/Frame: 3 | MaxFrameTime: 27ms
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Dropped 4 events this frame (processed 1/5)
+[EventLoop] Dropped 4 events this frame (processed 1/5)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[VGA] VSync #300 (frame 5s)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released (drag out)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] FPS: 57 | Events: 10 | Dropped: 17 | MaxEvents/Frame: 5 | MaxFrameTime: 28ms
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 55 | Events: 10 | Dropped: 8 | MaxEvents/Frame: 4 | MaxFrameTime: 29ms
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 7 | Dropped: 8 | MaxEvents/Frame: 4 | MaxFrameTime: 33ms
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] FPS: 57 | Events: 1 | Dropped: 0 | MaxEvents/Frame: 1 | MaxFrameTime: 31ms
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 49ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] FPS: 52 | Events: 2 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 49ms
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 34ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 49 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 34ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 36ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 48 | Events: 1 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 36ms
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 44ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] FPS: 50 | Events: 1 | Dropped: 0 | MaxEvents/Frame: 1 | MaxFrameTime: 44ms
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 37ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 2 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 37ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 37ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 34ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] FPS: 51 | Events: 1 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 37ms
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 35ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] FPS: 50 | Events: 3 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 35ms
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] FPS: 59 | Events: 3 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 33ms
+[EventLoop] Slow frame: 36ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] FPS: 51 | Events: 1 | Dropped: 1 | MaxEvents/Frame: 2 | MaxFrameTime: 36ms
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[VGA] VSync #360 (frame 6s)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 1 | Dropped: 0 | MaxEvents/Frame: 1 | MaxFrameTime: 32ms
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] FPS: 51 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 33ms
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 34ms (target: 16ms)
+[EventLoop] FPS: 55 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 34ms
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] FPS: 55 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 32ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 43ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 53 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 43ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] FPS: 48 | Events: 3 | Dropped: 3 | MaxEvents/Frame: 3 | MaxFrameTime: 31ms
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 43ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 48ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 38ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] FPS: 51 | Events: 8 | Dropped: 7 | MaxEvents/Frame: 3 | MaxFrameTime: 48ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 59ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] FPS: 50 | Events: 6 | Dropped: 9 | MaxEvents/Frame: 3 | MaxFrameTime: 59ms
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] FPS: 54 | Events: 8 | Dropped: 7 | MaxEvents/Frame: 3 | MaxFrameTime: 27ms
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 52 | Events: 7 | Dropped: 5 | MaxEvents/Frame: 3 | MaxFrameTime: 30ms
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 35ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] FPS: 53 | Events: 9 | Dropped: 6 | MaxEvents/Frame: 3 | MaxFrameTime: 35ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 50ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] FPS: 51 | Events: 8 | Dropped: 6 | MaxEvents/Frame: 3 | MaxFrameTime: 50ms
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 38ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[VGA] VSync #420 (frame 7s)
+[EventLoop] FPS: 54 | Events: 10 | Dropped: 6 | MaxEvents/Frame: 3 | MaxFrameTime: 38ms
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] FPS: 52 | Events: 9 | Dropped: 6 | MaxEvents/Frame: 3 | MaxFrameTime: 33ms
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 34ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 37ms (target: 16ms)
+[Input] Button 'B2' released
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 8 | Dropped: 4 | MaxEvents/Frame: 2 | MaxFrameTime: 37ms
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[Input] Button 'B2' released
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 54ms (target: 16ms)
+[Input] Button 'B2' pressed
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 36ms (target: 16ms)
+[EventLoop] Slow frame: 42ms (target: 16ms)
+[EventLoop] FPS: 52 | Events: 5 | Dropped: 5 | MaxEvents/Frame: 3 | MaxFrameTime: 54ms
+[EventLoop] Dropped 6 events this frame (processed 1/7)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[Input] Button 'B2' released (drag out)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 37ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[Input] Button 'RESET' pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[SimThread] Reset triggered
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[Input] Button 'RESET' released
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] FPS: 47 | Events: 10 | Dropped: 20 | MaxEvents/Frame: 7 | MaxFrameTime: 37ms
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] FPS: 56 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 31ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Dropped 3 events this frame (processed 1/4)
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Dropped 2 events this frame (processed 1/3)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] FPS: 57 | Events: 10 | Dropped: 10 | MaxEvents/Frame: 4 | MaxFrameTime: 24ms
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23
+ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 25ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] FPS: 54 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 33ms
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 243ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[EventLoop] FPS: 41 | Events: 1 | Dropped: 0 | MaxEvents/Frame: 1 | MaxFrameTime: 243ms
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 39ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] FPS: 53 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 39ms
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] FPS: 55 | Events: 1 | Dropped: 0 | MaxEvents/Frame: 1 | MaxFrameTime: 29ms
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 30ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 54ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] FPS: 47 | Events: 2 | Dropped: 0 | MaxEvents/Frame: 1 | MaxFrameTime: 54ms
+[EventLoop] Slow frame: 29ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 37ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 46ms (target: 16ms)
+[EventLoop] Slow frame: 39ms (target: 16ms)
+[EventLoop] Slow frame: 24ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[VGA] VSync #480 (frame 8s)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 26ms (target: 16ms)
+[EventLoop] Slow frame: 34ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 33ms (target: 16ms)
+[EventLoop] FPS: 46 | Events: 0 | Dropped: 0 | MaxEvents/Frame: 0 | MaxFrameTime: 46ms
+[EventLoop] Slow frame: 27ms (target: 16ms)
+[EventLoop] Slow frame: 36ms (target: 16ms)
+[EventLoop] Slow frame: 28ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 23ms (target: 16ms)
+[EventLoop] Slow frame: 31ms (target: 16ms)
+[EventLoop] Slow frame: 22ms (target: 16ms)
+[EventLoop] Slow frame: 32ms (target: 16ms)
+[Input] Quit key pressed
+[EventLoop] Dropped 1 events this frame (processed 1/2)
+[EventLoop] Slow frame: 29ms (target: 16ms)
+
+========== EventLoop Final Stats ==========
+Total frames processed: 43
+Total events processed: 1
+Total events dropped:   1
+Max events in one frame: 2
+===========================================
+
+========== Simulation Thread Stats ==========
+Simulation duration: 99s
+Total iterations:    201635840
+Iterations/second:   2036725
+Final time stamp:    806543480
+=============================================
+[SimThread] Simulation loop ended
+----------------------------------------
+✓ Simulation execution completed!

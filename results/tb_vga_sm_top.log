@@ -1,0 +1,25 @@
+VCD info: dumpfile results/tb_vga_sm_top.vcd opened for output.
+=== Lab 4 vga_sm_top integration test ===
+PASS  after reset: screen_sel=0, st_cur=001 (colour bars)
+PASS  probe bar 0 (red) (0,0): rgb=f800
+PASS  probe bar 1 (orange) (64,240): rgb=fc00
+PASS  probe bar 9 (gray) (639,479): rgb=d69a
+      captured 307200 pixels to results/screen_0_bars.hex
+PASS  click 1: screen_sel=1 (MUST), exactly 1 transition
+PASS  probe M top-left (144,208): rgb=ffff
+PASS  probe M hole (176,240): rgb=0000
+PASS  probe gap after M (224,240): rgb=0000
+      captured 307200 pixels to results/screen_1_must.hex
+PASS  click 2: screen_sel=2 (END), exactly 1 transition
+PASS  probe E top-left (192,208): rgb=ffff
+PASS  probe D bottom-right (431,271): rgb=ffff
+PASS  probe after D (448,240): rgb=0000
+      captured 307200 pixels to results/screen_2_end.hex
+PASS  click 3: screen_sel=0 (bars again), cycle wraps
+PASS  probe after the full cycle (0,0): rgb=f800
+PASS  reset during press: bars immediately, key held
+PASS  held button: 0 transitions in the 40 ms after reset
+PASS  bouncing click: exactly 1 transition, screen_sel=1
+PASS  long 120 ms press: exactly 1 transition, screen_sel=2
+RESULT: PASS (vga_sm_top: cycle, frames, reset, bounce, long press)
+Sim/tb_vga_sm_top.v:277: $finish called at 589327970 (1ns)

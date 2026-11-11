@@ -1,0 +1,7 @@
+VCD info: dumpfile results/tb_pll.vcd opened for output.
+=== Lab 4 pll test ===
+PASS  vga_clk held at 0 while reset is asserted
+PASS  vga_clk period = 40 ns (25.000 MHz)
+PASS  vga_clk high time = 20 ns (50 % duty)
+RESULT: PASS (pll: period, duty and reset)
+Sim/tb_pll.v:74: $finish called at 190 (1ns)

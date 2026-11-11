@@ -1,0 +1,15 @@
+VCD info: dumpfile results/tb_screen_fsm.vcd opened for output.
+=== Lab 4 screen_fsm test ===
+PASS  reset: st_cur=001 screen_sel=0 (one-hot)
+PASS  click 1 (MUST): st_cur=010 screen_sel=1 (one-hot)
+PASS  click 2 (END): st_cur=100 screen_sel=2 (one-hot)
+PASS  click 3 (BARS): st_cur=001 screen_sel=0 (one-hot)
+PASS  click 4 (MUST): st_cur=010 screen_sel=1 (one-hot)
+PASS  click 5 (END): st_cur=100 screen_sel=2 (one-hot)
+PASS  reset from END: st_cur=001 screen_sel=0 (one-hot)
+PASS  click after reset: st_cur=010 screen_sel=1 (one-hot)
+PASS  reset from MUST: st_cur=001 screen_sel=0 (one-hot)
+PASS  pulse during reset ignored: st_cur=001 screen_sel=0 (one-hot)
+PASS  state after reset release: st_cur=001 screen_sel=0 (one-hot)
+RESULT: PASS (screen_fsm: cycle, one-hot, reset)
+Sim/tb_screen_fsm.v:128: $finish called at 1243 (1ns)

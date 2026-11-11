@@ -1,0 +1,5 @@
+VCD info: dumpfile results/tb_no_debounce.vcd opened for output.
+=== Lab 4 un-debounced click (comparison only) ===
+      one bouncing click, no debounce: 41 screen transitions, final screen_sel=2
+RESULT: PASS (demonstration: 41 transitions for one click)
+Sim/tb_no_debounce.v:78: $finish called at 52001201 (1ns)

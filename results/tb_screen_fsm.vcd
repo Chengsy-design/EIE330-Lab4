@@ -1,0 +1,207 @@
+$date
+	Fri Nov  6 11:33:55 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_screen_fsm $end
+$var reg 1 ! vga_clk $end
+$upscope $end
+$scope module tb_screen_fsm $end
+$var reg 1 " sys_rst_n $end
+$upscope $end
+$scope module tb_screen_fsm $end
+$var reg 1 # key_press $end
+$upscope $end
+$scope module tb_screen_fsm $end
+$var wire 2 $ screen_sel [1:0] $end
+$upscope $end
+$scope module tb_screen_fsm $end
+$scope module dut $end
+$var reg 3 % st_cur [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx %
+bx $
+0#
+1"
+0!
+$end
+#1
+b0 $
+b1 %
+0"
+#20
+1!
+#40
+0!
+#60
+1!
+#80
+0!
+#100
+1!
+#103
+1"
+#120
+0!
+#140
+1!
+#160
+0!
+#180
+1!
+#200
+0!
+#220
+1!
+#240
+1#
+0!
+#260
+b1 $
+b10 %
+1!
+#280
+0#
+0!
+#300
+1!
+#320
+1#
+0!
+#340
+b10 $
+b100 %
+1!
+#360
+0#
+0!
+#380
+1!
+#400
+1#
+0!
+#420
+b0 $
+b1 %
+1!
+#440
+0#
+0!
+#460
+1!
+#480
+1#
+0!
+#500
+b1 $
+b10 %
+1!
+#520
+0#
+0!
+#540
+1!
+#560
+1#
+0!
+#580
+b10 $
+b100 %
+1!
+#600
+0#
+0!
+#602
+b0 $
+b1 %
+0"
+#620
+1!
+#640
+0!
+#660
+1!
+#680
+0!
+#700
+1!
+#704
+1"
+#720
+0!
+#740
+1!
+#760
+0!
+#780
+1!
+#800
+0!
+#820
+1!
+#840
+1#
+0!
+#860
+b1 $
+b10 %
+1!
+#880
+0#
+0!
+#882
+b0 $
+b1 %
+0"
+#900
+1!
+#920
+0!
+#940
+1!
+#960
+0!
+#980
+1!
+#1000
+1#
+0!
+#1020
+1!
+#1040
+0#
+0!
+#1060
+1!
+#1080
+0!
+#1100
+1!
+#1120
+0!
+#1140
+1!
+#1142
+1"
+#1160
+0!
+#1180
+1!
+#1200
+0!
+#1220
+1!
+#1240
+0!
+#1243

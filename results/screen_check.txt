@@ -1,0 +1,4 @@
+bars: 0 / 307200 pixels differ from the model
+must: 0 / 307200 pixels differ from the model
+end: 0 / 307200 pixels differ from the model
+total mismatches: 0

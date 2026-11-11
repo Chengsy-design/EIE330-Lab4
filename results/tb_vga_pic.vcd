@@ -1,0 +1,28 @@
+$date
+	Fri Nov  6 11:33:55 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_vga_pic $end
+$var reg 1 ! vga_clk $end
+$upscope $end
+$scope module tb_vga_pic $end
+$var reg 1 " sys_rst_n $end
+$upscope $end
+$scope module tb_vga_pic $end
+$var reg 2 # screen_sel [1:0] $end
+$upscope $end
+$scope module tb_vga_pic $end
+$var reg 10 $ pix_x [9:0] $end
+$upscope $end
+$scope module tb_vga_pic $end
+$var reg 10 % pix_y [9:0] $end
+$upscope $end
+$scope module tb_vga_pic $end
+$var wire 16 & pix_data [15:0] $end
+$upscope $end
+$enddefinitions $end

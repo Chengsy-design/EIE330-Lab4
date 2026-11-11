@@ -1,0 +1,29 @@
+VCD info: dumpfile results/tb_vga_pic.vcd opened for output.
+=== Lab 4 vga_pic test ===
+PASS  screen 0 (bars): 307200 / 307200 pixels match the golden model
+PASS  screen 1 (MUST): 307200 / 307200 pixels match the golden model
+PASS  screen 2 (END): 307200 / 307200 pixels match the golden model
+PASS  ten colour bars, each 64 pixels wide (640 = 10 x 64)
+      MUST glyph pixels: M=2560 U=2304 S=2496 T=1792
+      END  glyph pixels: E=2112 N=2560 D=2432
+PASS  glyph counts = bitmap ones x 64 (M 2560, U 2304, S 2496, T 1792, E 2112, N 2560, D 2432)
+      probe check (screen, x, y, rgb)
+PASS  probe bar 0 start (0,0): rgb=f800
+PASS  probe bar 0 end (63,479): rgb=f800
+PASS  probe bar 1 start (64,240): rgb=fc00
+PASS  probe bar 9 end (639,479): rgb=d69a
+PASS  probe M top-left (144,208): rgb=ffff
+PASS  probe M top-right (207,208): rgb=ffff
+PASS  probe M bottom-left (144,271): rgb=ffff
+PASS  probe M hole (176,240): rgb=0000
+PASS  probe gap after M (224,240): rgb=0000
+PASS  probe above M (144,207): rgb=0000
+PASS  probe E top-left (192,208): rgb=ffff
+PASS  probe gap after E (256,240): rgb=0000
+PASS  probe D bottom-right (431,271): rgb=ffff
+PASS  probe right of D bottom (447,271): rgb=0000
+PASS  probe after D (448,240): rgb=0000
+PASS  probe before E (191,240): rgb=0000
+PASS  probe out of window (1023,1023): rgb=0000
+RESULT: PASS (vga_pic: three screens exhaustive)
+Sim/tb_vga_pic.v:282: $finish called at 36864901 (1ns)

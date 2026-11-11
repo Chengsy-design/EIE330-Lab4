@@ -1,0 +1,13 @@
+VCD info: dumpfile results/tb_key_debounce.vcd opened for output.
+=== Lab 4 key_debounce test ===
+PASS  reset clears both counters, key_state=0, no pulse
+PASS  key_state=1 after 22 ms released
+PASS  clean 30 ms click: 1 pulse, 20000040 ns after the edge (expected 20 ms)
+PASS  long 100 ms press: 1 pulse, no repeat while held
+PASS  bouncing click (8 ms of 0.1 ms toggles): 1 pulse, cnt_press max 2500 during bounce
+PASS  two clicks: 2 pulses, one per click
+PASS  reset during press clears the filter immediately
+PASS  button held through reset: 0 pulses in the 40 ms after release
+PASS  click after re-arm: 1 pulse (total 6 in the run)
+RESULT: PASS (key_debounce: bounce, long press, reset, re-arm)
+Sim/tb_key_debounce.v:265: $finish called at 479002220 (1ns)

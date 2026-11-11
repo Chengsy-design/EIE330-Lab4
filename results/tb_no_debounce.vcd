@@ -1,0 +1,25 @@
+$date
+	Fri Nov  6 11:35:27 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb_no_debounce $end
+$var reg 1 ! vga_clk $end
+$upscope $end
+$scope module tb_no_debounce $end
+$var reg 1 " sys_rst_n $end
+$upscope $end
+$scope module tb_no_debounce $end
+$var reg 1 # key_in $end
+$upscope $end
+$scope module tb_no_debounce $end
+$var wire 1 $ key_press $end
+$upscope $end
+$scope module tb_no_debounce $end
+$var wire 2 % screen_sel [1:0] $end
+$upscope $end
+$enddefinitions $end

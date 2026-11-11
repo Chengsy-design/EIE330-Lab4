@@ -1,0 +1,12 @@
+VCD info: dumpfile results/tb_vga_reset.vcd opened for output.
+=== Lab 4 reset test ===
+PASS  reset from MUST: bars asserted 0 ns after the reset edge (asynchronous)
+PASS  reset from MUST: bars remain after reset release
+PASS  reset from END: bars asserted 0 ns after the reset edge (asynchronous)
+PASS  reset from END: bars remain after reset release
+PASS  mid-click reset: bars, the pending click is cancelled
+PASS  mid-click reset: no transition after the reset
+PASS  first visible pixel after reset is (0,0) = F800
+PASS  held button through reset: bars stay bars
+RESULT: PASS (reset: every screen, mid-click, held button)
+Sim/tb_vga_reset.v:211: $finish called at 411132470 (1ns)

@@ -34,7 +34,6 @@ Lab_4_1/
 │   ├── wave_tikz.py      VCD → vector TikZ waveform figures
 │   ├── make_figures.py   screens comparison + waveform figures
 │   └── make_tikz.py      bitmap figure, expected-screen figure
-├── doc/                  (kept empty, as the course convention asks)
 ├── results/              generated: VCDs, logs, captured frames
 └── Makefile
 ```
